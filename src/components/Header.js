@@ -8,13 +8,15 @@ const Header = () => {
         <h1>Hi, I'm OKURA TAIKI.</h1>
         <Typed
           className="typed-text"
-          strings={["HTML", "CSS", "JavaScript", "Python", "Django"]}
+          strings={["Web Design", "Web Development", "Student"]}
           typeSpeed={40}
           backSpeed={60}
           loop
         />
         {/* eslint-disable-next-line */}
-        <a href="#" className="btn-main-offer">Contact me</a>
+        <a href="#" className="btn-main-offer">
+          Contact me
+        </a>
       </div>
     </div>
   );
