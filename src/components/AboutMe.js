@@ -3,7 +3,7 @@ import avatar from "../avatar.jpeg";
 
 const AboutMe = () => {
   return (
-    <div id="about" className="container py-5 mt-3">
+    <div id="about" className="container py-5 mt-4">
       <div className="row">
         <div className="col-lg-6 col-xm-12">
           <div className="photo-wrap mb-5">
