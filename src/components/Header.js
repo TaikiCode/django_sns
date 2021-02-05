@@ -1,5 +1,6 @@
 import React from "react";
 import Typed from "react-typed";
+import { Link } from "react-scroll";
 
 const Header = () => {
   return (
@@ -13,10 +14,9 @@ const Header = () => {
           backSpeed={60}
           loop
         />
-        {/* eslint-disable-next-line */}
-        <a href="#" className="btn-main-offer">
+        <Link smooth={true} to="contacts" className="btn-main-offer">
           Contact me
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -57,7 +57,7 @@ const Contact = () => {
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Name"
+                  placeholder="お名前"
                   name="name"
                   ref={register({
                     required: "名前を入力してください",
@@ -73,28 +73,12 @@ const Contact = () => {
               <span className="error-message">
                 {errors.name && errors.name.message}
               </span>
-              {/* PHONE INPUT */}
-              <div className="text-center">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Phone Number"
-                  name="phone"
-                  ref={register({
-                    required: "Please add your phone number",
-                  })}
-                />
-                <div className="line"></div>
-              </div>
-              <span className="error-message">
-                {errors.phone && errors.phone.message}
-              </span>
               {/* EMAIL INPUT */}
               <div className="text-center">
                 <input
                   type="email"
                   className="form-control"
-                  placeholder="Email"
+                  placeholder="メールアドレス"
                   name="email"
                   ref={register({
                     required: "Please provide you email",
@@ -114,7 +98,7 @@ const Contact = () => {
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Subject"
+                  placeholder="主題"
                   name="subject"
                   ref={register({
                     required: "OOPS, you forget to add the subject.",
@@ -132,7 +116,7 @@ const Contact = () => {
                 <textarea
                   type="text"
                   className="form-control"
-                  placeholder="Please describe shortly you project..."
+                  placeholder="お問い合わせ内容"
                   name="description"
                   ref={register({
                     required: "Please describe shortly your project needs...",

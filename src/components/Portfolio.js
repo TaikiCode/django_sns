@@ -182,6 +182,7 @@ const Portfolio = () => {
             <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
           </div>
         </div>
+
       </div>
       <PopupboxContainer {...popupboxConfigText1} />
       <PopupboxContainer {...popupboxConfigText2} />
