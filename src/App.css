@@ -264,11 +264,86 @@ nav ul li {
   }
 }
 
+/************************ SKILLS COMPONENT *********************************/
+
+.skills-wrapper {
+  background: var(--primary-dark);
+  padding: 2rem 0;
+}
+
+.skills-wrapper h1 {
+  color: var(--primary-orange);
+}
+
+.skills-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.column {
+  width: 48%;
+}
+
+.column .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.column .info p {
+  color: var(--primary-light-grey);
+  font-weight: bold;
+}
+
+.column .line {
+  height: 1.3rem;
+  width: 100%;
+  background: var(--primary-grey);
+  position: relative;
+  border-radius: 1rem;
+}
+
+.column .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: crimson;
+  border-radius: 1rem;
+}
+
+.column .htmlcss::before {
+  width: 80%;
+}
+
+.column .js::before {
+  width: 70%;
+}
+.column .react::before {
+  width: 75%;
+}
+.column .python::before {
+  width: 90%;
+}
+
+.column .django::before {
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  .column {
+    width: 75%;
+  }
+}
+
 /************************ PORTFOLIO *********************************/
 
 .portfolio-wrapper {
-  /* background: var(--primary-light-grey); */
-  background: var(--primary-dark);
+  background: var(--primary-dark-grey);
+  /* background: var(--primary-dark); */
   padding: 3rem 0;
 }
 
@@ -362,7 +437,6 @@ nav ul li {
     width: 30%;
   }
 }
-
 
 /************************ CONTACTS COMPONENT *********************************/
 .contacts {
@@ -469,7 +543,6 @@ textarea.form-control {
   }
 }
 
-
 /************************ FOOTER COMPONENT *********************************/
 .footer {
   background: var(--primary-black);
@@ -493,4 +566,3 @@ textarea.form-control {
 .footer p {
   margin-bottom: 0;
 }
-
