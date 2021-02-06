@@ -1,13 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 // REACT FONTAWESOME IMPORT
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
+  // scroll が高さを超えているとき trueになるstate
+  const [isHeightOver, setIsHeightOver] = useState(false);
+
+  useEffect(() => {
+    const scrollAction = () => {
+      if (150 > window.scrollY) {
+        setIsHeightOver(true);
+      } else {
+        setIsHeightOver(false);
+      }
+    };
+    window.addEventListener("scroll", scrollAction, {
+      capture: false,
+      passive: true,
+    });
+    scrollAction(); // 初期描画時に一度だけ判定する
+    return () => {
+      window.removeEventListener("scroll", scrollAction);
+    };
+  }, []);
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-dark">
-      <div className="container my-3">
+    <nav
+      className={
+        isHeightOver
+          ? "navbar navbar-expand-lg navbar-light fixed-top"
+          : "navbar navbar-expand-lg navbar-light fixed-top active"
+      }
+    >
+      <div className={isHeightOver ? "container my-4" : "container my-2"}>
         <button
           className="navbar-toggler"
           type="button"
@@ -20,7 +47,7 @@ const Navbar = () => {
           <FontAwesomeIcon icon={faBars} style={{ color: "#fff" }} />
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ml-auto">
+          <ul className="navbar-nav m-auto">
             <li className="nav-item active">
               <Link
                 smooth={true}
@@ -36,7 +63,7 @@ const Navbar = () => {
               <Link
                 smooth={true}
                 to="about"
-                offset={-110}
+                offset={-100}
                 className="nav-link"
                 href="#"
               >
@@ -47,7 +74,7 @@ const Navbar = () => {
               <Link
                 smooth={true}
                 to="experience"
-                offset={-110}
+                offset={-77}
                 className="nav-link"
                 href="#"
               >
@@ -58,7 +85,7 @@ const Navbar = () => {
               <Link
                 smooth={true}
                 to="skills"
-                offset={-110}
+                offset={-75}
                 className="nav-link"
                 href="#"
               >
@@ -69,7 +96,7 @@ const Navbar = () => {
               <Link
                 smooth={true}
                 to="portfolio"
-                offset={-110}
+                offset={-75}
                 className="nav-link"
                 href="#"
               >
@@ -80,7 +107,7 @@ const Navbar = () => {
               <Link
                 smooth={true}
                 to="contacts"
-                offset={-110}
+                offset={-75}
                 className="nav-link"
                 href="#"
               >

@@ -20,14 +20,20 @@ body {
 
 /************************ NAVBAR *********************************/
 
+
 nav {
-  z-index: 2;
+  z-index: 10;
+  background-color: transparent;
+}
+
+nav.active {
+  background-color: var(--primary-transparent-black);
 }
 
 /* MENU LINKS */
 
 nav a.nav-link {
-  font-size: 0.8rem;
+  font-size: 1rem;
   letter-spacing: 0.0375rem;
   cursor: pointer;
 }
@@ -40,7 +46,6 @@ nav ul li {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
   color: var(--primary-white) !important;
-  border-top: 0.1875rem solid var(--primary-dark);
 }
 
 /* .navbar-brand {
@@ -49,11 +54,11 @@ nav ul li {
   height: 6rem !important;
 } */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .navbar-brand {
     width: 7rem;
   }
-}
+} */
 
 .navbar-nav > li > a.active,
 .navbar-nav > li > a:focus {
@@ -101,6 +106,7 @@ nav ul li {
 .main-info h1 {
   color: var(--primary-orange);
   /* text-transform: uppercase; */
+  /* font-size: 2rem; */
 }
 
 /* TYPED TEXT */
@@ -118,17 +124,17 @@ nav ul li {
   }
 }
 
-/* HEADER MAIN OFFER BUTTON */
-.btn-main-offer {
+/* HEADER MAIN BUTTON */
+.btn-main {
   border: 1px solid var(--primary-red);
   text-transform: uppercase;
   border-radius: 0;
-  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  padding: 0.75rem;
   color: var(--primary-white);
   margin: 2rem;
 }
 
-.btn-main-offer:hover {
+.btn-main:hover {
   text-decoration: none;
   background-color: var(--primary-hover-red);
   color: var(--primary-white);
