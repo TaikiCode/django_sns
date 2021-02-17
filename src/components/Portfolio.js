@@ -1,6 +1,7 @@
 import React from "react";
 import todo from "../todo-app.png";
 import ec from "../ec.png";
+import coin_tracker from "../coin-tracker.png";
 // FONTAWESOME IMPORTS
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearchPlus } from "@fortawesome/free-solid-svg-icons";
@@ -81,7 +82,7 @@ const Portfolio = () => {
       <>
         <img
           className="portfolio-image-popupbox"
-          src={todo}
+          src={coin_tracker}
           alt="test01..."
         />
         <p>
@@ -92,9 +93,18 @@ const Portfolio = () => {
         {/* eslint-disable-next-line */}
         <a
           className="hyper-link"
-          onClick={() => window.open("https://github.com/TaikiCode/react_todo")}
+          onClick={() => window.open("https://github.com/TaikiCode/react_coin-tracker")}
         >
-          https://github.com/TaikiCode/react_todo
+          https://github.com/TaikiCode/react_coin-tracker
+        </a>
+        <br/>
+        <b>demo:</b>
+        {/* eslint-disable-next-line */}
+        <a
+          className="hyper-link"
+          onClick={() => window.open("https://taikicode.github.io/react_coin-tracker/")}
+        >
+          https://taikicode.github.io/react_coin-tracker/
         </a>
       </>
     );
@@ -165,7 +175,7 @@ const Portfolio = () => {
           <div className="portfolio-image-box" onClick={openPopupboxTest3}>
             <img
               className="portfolio-image"
-              src={todo}
+              src={coin_tracker}
               alt="text03..."
             />
             <div className="overflow"></div>
